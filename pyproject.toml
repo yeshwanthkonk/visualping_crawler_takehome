@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "visualping-crawler"
+version = "0.1.0"
+description = "A browser-aware crawler for discovering reachable password resources."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["python-dotenv>=1.0", "requests>=2.31"]
+
+[project.optional-dependencies]
+browser = ["playwright>=1.45"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
